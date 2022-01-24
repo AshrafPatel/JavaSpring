@@ -7,8 +7,19 @@
     http://www.springframework.org/schema/context/ 
     http://www.springframework.org/schema/context/spring-context.xsd">
     
+    
+    <bean id="happyFortune" class="com.ashraf.springdemo.HappyFortuneService">
+    </bean>
+    <bean id="sadFortune" class="com.ashraf.springdemo.SadFortuneService">
+    </bean>
+    
     <bean id="cCoach" class="com.ashraf.springdemo.CricketCoach">
+    	<constructor-arg ref="happyFortune"/>
     </bean>
     <bean id="fCoach" class="com.ashraf.springdemo.FootballCoach">
+    	<constructor-arg ref="happyFortune"/>
+    </bean>
+    <bean id="gCoach" class="com.ashraf.springdemo.GolfCoach">
+    	<constructor-arg ref="sadFortune"/>
     </bean>
 </beans>

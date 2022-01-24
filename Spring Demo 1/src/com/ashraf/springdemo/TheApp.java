@@ -12,7 +12,10 @@ public class TheApp {
 		System.out.println(fCoach.getDailyWorkout());
 		Coach cCoach = context.getBean("cCoach", Coach.class);
 		System.out.println(cCoach.getDailyWorkout());
+		Coach gCoach = context.getBean("gCoach", Coach.class);
+		System.out.println(gCoach.getDailyFortune());
 		context.close();
+		
 	}
 
 }
